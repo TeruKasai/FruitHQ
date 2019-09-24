@@ -15,7 +15,7 @@ public class Main extends JavaPlugin{
 	//Fires when plugin is disabled
 	@Override
 	public void onDisable() {
-		
+		System.out.print("System is disabled");
 		
 	}
 }
