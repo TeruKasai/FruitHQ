@@ -8,7 +8,7 @@ public class Main extends JavaPlugin{
 	//Fires when plugin is enabled
 	@Override
 	public void onEnable(){
-		
+		System.out.print("Jordan is a bean");
 	}
 	
 	
