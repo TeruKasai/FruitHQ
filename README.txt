@@ -4,5 +4,5 @@ once you have your IDE installed, import the project within the "Plugin" folder,
 
 There's a compiled "Server Files" folder premade for 1.14.4, when testing plugins use this folder by starting the server with "run.bat"
 if the server fails to load because of access denied. Try placing the folder elsewhere, place the plugin into the plugins folder inside the server files
-and connect to the server using the ip, "localhost"  
+and connect to the server using the ip, "localhost"  yes
 
