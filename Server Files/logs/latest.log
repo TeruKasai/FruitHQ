@@ -1,0 +1,29 @@
+[16:16:19] [Server thread/INFO]: Starting minecraft server version 1.14.4
+[16:16:19] [Server thread/INFO]: Loading properties
+[16:16:19] [Server console handler/ERROR]: Exception handling console input
+java.io.IOException: The handle is invalid
+	at java.io.FileInputStream.readBytes(Native Method) ~[?:?]
+	at java.io.FileInputStream.read(FileInputStream.java:273) ~[?:?]
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:252) ~[?:?]
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:271) ~[?:?]
+	at org.bukkit.craftbukkit.libs.jline.internal.NonBlockingInputStream.read(NonBlockingInputStream.java:248) ~[Spigot-1.14.4.jar:git-Spigot-94af569-6ddeb98]
+	at org.bukkit.craftbukkit.libs.jline.internal.InputStreamReader.read(InputStreamReader.java:261) ~[Spigot-1.14.4.jar:git-Spigot-94af569-6ddeb98]
+	at org.bukkit.craftbukkit.libs.jline.internal.InputStreamReader.read(InputStreamReader.java:198) ~[Spigot-1.14.4.jar:git-Spigot-94af569-6ddeb98]
+	at org.bukkit.craftbukkit.libs.jline.console.ConsoleReader.readCharacter(ConsoleReader.java:2145) ~[Spigot-1.14.4.jar:git-Spigot-94af569-6ddeb98]
+	at org.bukkit.craftbukkit.libs.jline.console.ConsoleReader.readLineSimple(ConsoleReader.java:3183) ~[Spigot-1.14.4.jar:git-Spigot-94af569-6ddeb98]
+	at org.bukkit.craftbukkit.libs.jline.console.ConsoleReader.readLine(ConsoleReader.java:2333) ~[Spigot-1.14.4.jar:git-Spigot-94af569-6ddeb98]
+	at org.bukkit.craftbukkit.libs.jline.console.ConsoleReader.readLine(ConsoleReader.java:2269) ~[Spigot-1.14.4.jar:git-Spigot-94af569-6ddeb98]
+	at org.bukkit.craftbukkit.libs.jline.console.ConsoleReader.readLine(ConsoleReader.java:2257) ~[Spigot-1.14.4.jar:git-Spigot-94af569-6ddeb98]
+	at net.minecraft.server.v1_14_R1.DedicatedServer$2.run(DedicatedServer.java:97) [Spigot-1.14.4.jar:git-Spigot-94af569-6ddeb98]
+[16:16:22] [Server thread/INFO]: This server is running CraftBukkit version git-Spigot-94af569-6ddeb98 (MC: 1.14.4) (Implementing API version 1.14.4-R0.1-SNAPSHOT)
+[16:16:22] [Server thread/INFO]: Debug logging is disabled
+[16:16:22] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[16:16:22] [Server thread/INFO]: Using 4 threads for Netty based IO
+[16:16:23] [Server thread/INFO]: Default game type: SURVIVAL
+[16:16:23] [Server thread/INFO]: Generating keypair
+[16:16:26] [Server thread/INFO]: Starting Minecraft server on *:25565
+[16:16:26] [Server thread/INFO]: Using default channel type
+[16:16:33] [Server thread/INFO]: Preparing level "world"
+[16:16:34] [Server thread/INFO]: Found new data pack file/bukkit, loading it automatically
+[16:16:34] [Server thread/INFO]: Found new data pack vanilla, loading it automatically
+[16:16:35] [Server thread/INFO]: Reloading ResourceManager: Default, bukkit
