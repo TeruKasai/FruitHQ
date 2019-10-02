@@ -6,6 +6,10 @@ import org.bukkit.block.data.BlockData;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerBedLeaveEvent;
+import org.bukkit.material.*;
+
+import com.sun.tools.doclint.HtmlTag.BlockType;
+
 import net.minecraft.server.v1_14_R1.BlockBed;
 
 import org.bukkit.entity.*;
@@ -22,15 +26,15 @@ public class BedDetection implements Listener{
 		Location player = event.getPlayer().getLocation();
 		Location bed = event.getBed().getLocation();
 		Location bed2 = bed.add(1, 0, 0);
-		Material bed2M = bed2.getBlock().getType();
+		String bed2M = bed2.getBlock().getType().toString();
+	
 
-		
-		
+		System.out.println(bed2M);
 		
 		
 
 	    
-	    if((bed2M == Material.WHITE_BED)) {
+	    if((bed2M.contains("BED"))&&(bed2.getBlock().getType()!=Material.BEDROCK)) {
 	          Villager villager = (Villager) player.getWorld().spawnEntity(player, EntityType.VILLAGER);
 	  	      villager.setBaby();
 	    }
