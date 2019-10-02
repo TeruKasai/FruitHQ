@@ -6,6 +6,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/GitHub Desktop/FruitHQ/spigot-1.14.4.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Spigot 1.14.4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
