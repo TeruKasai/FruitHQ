@@ -1,24 +1,14 @@
 package vo.tam;
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.block.Block;
-import org.bukkit.block.data.BlockData;
+import org.bukkit.entity.EntityType;
+import org.bukkit.entity.Villager;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerBedLeaveEvent;
-import org.bukkit.material.*;
-
-import com.sun.tools.doclint.HtmlTag.BlockType;
-
-import net.minecraft.server.v1_14_R1.BlockBed;
-
-import org.bukkit.entity.*;
-import org.bukkit.block.data.type.*;
 
 
 public class BedDetection implements Listener{
-	double x;
-	double z;
 	
 	
 	@EventHandler
