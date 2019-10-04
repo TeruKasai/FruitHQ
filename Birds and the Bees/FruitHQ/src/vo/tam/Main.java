@@ -13,6 +13,7 @@ public class Main extends JavaPlugin implements Listener{
 	public void onEnable(){
 		System.out.print("Jordan is a beany");
 		Bukkit.getServer().getPluginManager().registerEvents(new BedDetection(), this);
+		Bukkit.getServer().getPluginManager().registerEvents(new Realistic_Damage(), this);
 	}
 	
 	//Fires when plugin is disabled
