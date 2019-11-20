@@ -1,9 +1,7 @@
 package vo.tam;
 
-import org.bukkit.Bukkit;
+
 import org.bukkit.entity.CaveSpider;
-import org.bukkit.entity.Entity;
-import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Spider;
@@ -12,15 +10,14 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
-import org.bukkit.event.entity.EntityEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
-import org.bukkit.plugin.Plugin;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
-import org.bukkit.scheduler.BukkitTask;
+import org.bukkit.scheduler.BukkitRunnable;
 
 public class Realistic_Damage implements Listener {
-
+	
+	
 	@EventHandler
 	public static void FallDamage(EntityDamageEvent event) {
 		if(event.getCause() == DamageCause.FALL) {
@@ -72,25 +69,34 @@ public class Realistic_Damage implements Listener {
 		}
 	}
 	
+	//Initializes an object Main called main which is currently set to null (not created)
+   private final Main main;
+	//private final Main plugin; another way to create it
+   //Method CREATES a local Main object called plugin
+	public Realistic_Damage(Main plugin) {
+		/*main is then inheriting the values of plugin, this can also be done by instead editing the private final with = new Main();
+		The reason we do this is because we want to actually create the object, because main as of current is null,
+		but it can also be done with = new main(); */
+		main = plugin;
+		//registers the events of this class, with the main class. Allowing the methods in this class to pretty much work.
+		main.getServer().getPluginManager().registerEvents(this, main);
+	}
+	
+	
 	@EventHandler
 	public void RespawnNerf(PlayerRespawnEvent event) {
 		Player player = event.getPlayer();
 		int PlayerExp = player.getLevel();
 		player.setLevel((int) (PlayerExp * 0.8));
-		
-		
-		Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(this, new Runnable(){
+		new BukkitRunnable() {
+			@Override
 			public void run() {
-		player.setHealth(2);
 				System.out.println("Setting food level");
-		player.getFoodLevel();
-		System.out.println(player.getFoodLevel());
-		player.setFoodLevel(10);
-		System.out.println(player.getFoodLevel());
+				player.getFoodLevel();
+				player.setFoodLevel(8);
 			}
-		}, 100L);
+		}.runTaskLater(main, 20);
+
 	}
-	
-	
-	
-	}
+}
+

@@ -1,11 +1,13 @@
 package vo.tam;
 import org.bukkit.Bukkit;
-import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 
 
-public class Main extends JavaPlugin implements Listener{
+public class Main extends JavaPlugin{
+
+	
+
 
 	
 	//Fires when plugin is enabled
@@ -13,7 +15,8 @@ public class Main extends JavaPlugin implements Listener{
 	public void onEnable(){
 		System.out.print("Jordan is a beany");
 		Bukkit.getServer().getPluginManager().registerEvents(new BedDetection(), this);
-		Bukkit.getServer().getPluginManager().registerEvents(new Realistic_Damage(), this);
+		//Bukkit.getServer().getPluginManager().registerEvents(new Realistic_Damage(), this); disabled due to using a scheduler
+		new Realistic_Damage(this);
 	}
 	
 	//Fires when plugin is disabled
